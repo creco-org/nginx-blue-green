@@ -1,7 +1,9 @@
 FROM nginx:latest
 
-COPY conf/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8080
+WORKDIR /app
+
+COPY scripts /app/scripts
 
 CMD ["nginx", "-g", "daemon off;"]
