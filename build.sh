@@ -11,7 +11,7 @@ cd -
 
 cd ./docker/web
 
-docker build -t local-http:blue .
-docker create --name blue-app --network bridge --env=HOST_NAME=blue-app local-http:blue
+docker build -t local-http:blue-app .
+docker create --name blue-app --network bridge --env=HOST_NAME=blue-app local-http:blue-app
 
 cd -
